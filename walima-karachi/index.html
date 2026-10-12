@@ -117,11 +117,11 @@ main{overflow-x:clip; background:
 .photo{padding:30px 0 70px; text-align:center; position:relative}
 .photo::before{content:""; position:absolute; left:50%; top:46%; width:min(110vw,640px); height:min(80vw,460px); transform:translate(-50%,-50%) rotate(-8deg);
   background:radial-gradient(closest-side, rgba(111,165,166,.45), transparent); pointer-events:none}
-.prints{position:relative; width:min(94vw,540px); aspect-ratio:100/150; margin:0 auto}
+.prints{position:relative; width:min(80vw,360px); margin:0 auto}
 .print{position:absolute; padding:8px 8px 26px; background:#FFFEFB; transform:rotate(var(--r,0deg));
   box-shadow:0 1px 2px rgba(29,74,82,.14), 0 22px 40px rgba(29,74,82,.2)}
 .print img{width:100%; height:auto; display:block}
-.print.p-main{left:1%; top:0; width:60%; padding:11px 11px 50px; z-index:2; --r:-2.5deg}
+.print.p-main{position:relative; width:100%; padding:12px 12px 54px; z-index:2; --r:-2deg}
 .print.p-garden{right:0; top:4%; width:44%; z-index:3; --r:5deg}
 .print.p-hands{left:22%; top:63%; width:41%; z-index:1; --r:-6deg}
 .print figcaption{position:absolute; left:0; right:0; bottom:8px; font-family:var(--script); font-size:clamp(22px,6.4vw,30px); color:var(--sea-deep); text-align:center}
@@ -261,10 +261,8 @@ main{overflow-x:clip; background:
 
   <section class="photo" aria-label="Hasan and Munayam">
     <div class="prints">
-      <figure class="print p-garden reveal" style="--d:.1s"><img src="img/garden.webp" alt="Munayam and Hasan laughing on a carved swing under strings of white flowers" width="900" height="1125" loading="lazy" decoding="async"></figure>
-      <figure class="print p-main reveal"><img src="img/chandelier.webp" alt="Hasan and Munayam smiling at each other beneath a glowing chandelier" width="1000" height="1250" loading="lazy" decoding="async">
+      <figure class="print p-main reveal"><img src="img/chandelier-bw.webp" alt="Hasan and Munayam smiling at each other beneath a chandelier, in black and white" width="1000" height="1250" loading="lazy" decoding="async">
         <figcaption>Hasan &amp; Munayam</figcaption></figure>
-      <figure class="print p-hands reveal" style="--d:.25s"><img src="img/hands.webp" alt="Their hands clasped, her engagement ring catching the light" width="760" height="760" loading="lazy" decoding="async"></figure>
     </div>
   </section>
 
