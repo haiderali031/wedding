@@ -1,0 +1,797 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Haider &amp; Ayesha &middot; Walima</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0E1520">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Haider &amp; Ayesha &middot; Walima">
+<meta property="og:description" content="Sunday 24 January 2027 &middot; Sumbal Chak, Lahore. Tap to open your invitation.">
+<meta property="og:image" content="https://haiderali031.github.io/wedding/walima/preview.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://haiderali031.github.io/wedding/walima/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;1,6..96,400;1,6..96,500&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Marcellus&display=swap">
+<style>:root{
+  --ink:#0E1520; --ink-2:#131C2A; --navy:#1A2638; --navy-2:#22314A;
+  --powder:#A9BDD2; --powder-soft:#CAD7E5; --silver:#D9DEE5; --silver-dim:#8F9AAA;
+  --lamp:#E7C690; --lamp-dim:#B99A6A;
+  --text:#E8ECF1; --text-dim:#A9B4C2;
+  --display:"Bodoni Moda","Didot","Bodoni 72",serif;
+  --caps:"Marcellus","Trajan Pro",serif;
+  --serif:"Cormorant Garamond","Garamond",serif;
+  --arabic:"Amiri","Geeza Pro","Noto Naskh Arabic",serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box; margin:0; padding:0}
+html{-webkit-text-size-adjust:100%; scroll-behavior:smooth}
+html.gated{overflow:hidden}
+body{background:var(--ink); color:var(--text); font-family:var(--serif); font-size:18px; line-height:1.5;
+  font-variant-numeric:lining-nums; -webkit-font-smoothing:antialiased; overflow-x:clip}
+img{display:block; max-width:100%}
+a{color:inherit}
+[hidden]{display:none!important}
+.caps{font-family:var(--caps); text-transform:uppercase; letter-spacing:.32em; font-weight:400}
+.sr{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap}
+
+/* tulle-net texture + vignette on the night background */
+.night{position:relative}
+main{background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2226%22%20height%3D%2222%22%3E%3Cpath%20d%3D%22M0%2C11%20L6.5%2C0%20H19.5%20L26%2C11%20L19.5%2C22%20H6.5Z%22%20fill%3D%22none%22%20stroke%3D%22rgb%28169%2C189%2C210%29%22%20stroke-opacity%3D%22.055%22%20stroke-width%3D%22.7%22/%3E%3C/svg%3E") 0 0/26px 22px, var(--ink)}
+.invite{background:radial-gradient(90% 46% at 50% 20%, rgba(169,189,210,.09), transparent 70%)}
+
+/* ============ GATE: the veil ============ */
+.gate{position:fixed; inset:0; z-index:50; cursor:pointer; -webkit-tap-highlight-color:transparent; outline:none}
+.gate .haze{position:absolute; inset:0; background:rgba(16,26,42,.45);
+  -webkit-backdrop-filter:blur(9px) saturate(.75) brightness(.7); backdrop-filter:blur(9px) saturate(.75) brightness(.7)}
+.gate canvas{position:absolute; inset:0; width:100%; height:100%; display:block}
+.plaque{position:absolute; left:50%; top:50%; transform:translate(-50%,-54%); width:min(84vw,380px); text-align:center; pointer-events:none;
+  transition:opacity .5s ease, transform .7s cubic-bezier(.3,0,.2,1)}
+.plaque .arch{width:84px; margin:0 auto 18px}
+.plaque .of{font-size:11px; color:var(--powder-soft)}
+.plaque .pn{font-family:var(--display); font-style:italic; font-size:clamp(38px,11vw,54px); line-height:1.1; margin-top:8px;
+  text-shadow:0 2px 18px rgba(8,12,20,.55)}
+.plaque .pn i{font-family:var(--caps); font-style:normal; font-size:.5em; color:var(--silver-dim); margin:0 .25em; vertical-align:.18em}
+.plaque .tap{margin-top:30px; font-size:11px; color:var(--silver); animation:breathe 2.8s ease-in-out infinite}
+.plaque .snd{margin-top:8px; font-style:italic; font-size:15px; color:var(--text-dim)}
+@keyframes breathe{0%,100%{opacity:.55}50%{opacity:1}}
+.gate.open{pointer-events:none}
+.gate.open .plaque{opacity:0; transform:translate(-50%,-62%)}
+.gate.open .haze{opacity:0; transition:opacity 1.5s ease .35s}
+.gate.instant{opacity:0; transition:opacity .4s ease}
+.gate.reset,.gate.reset *{transition:none!important}
+.rewinding *,.rewinding *::before,.rewinding *::after{transition:none!important}
+
+/* ============ HERO ============ */
+.hero{position:relative; height:100svh; min-height:560px; overflow:hidden; background:var(--ink)}
+.hero picture,.hero img{position:absolute; inset:0; width:100%; height:100%}
+.hero img{object-fit:cover; object-position:50% 40%; transform:scale(1.08); transition:transform 7s cubic-bezier(.2,.6,.2,1)}
+.revealed .hero img{transform:none}
+.hero .shade{position:absolute; inset:0; background:
+  linear-gradient(180deg,rgba(14,21,32,.62) 0%,rgba(14,21,32,0) 28%,rgba(14,21,32,0) 55%,rgba(14,21,32,.9) 92%,var(--ink) 100%)}
+.hero-top{position:absolute; left:clamp(22px,6vw,64px); top:clamp(26px,6vh,56px)}
+.kicker{font-size:clamp(26px,7.4vw,40px); letter-spacing:.42em; line-height:1}
+.tag{margin-top:14px; font-size:10.5px; letter-spacing:.34em; line-height:2; color:var(--powder-soft)}
+.tick{display:block; width:34px; height:1px; background:var(--silver); opacity:.7; margin-top:12px}
+.hero-foot{position:absolute; left:0; right:0; bottom:clamp(22px,5vh,44px); text-align:center}
+.hero-foot .hn{font-family:var(--display); font-style:italic; font-size:clamp(30px,8vw,46px); line-height:1.1}
+.hero-foot .hn i{font-family:var(--caps); font-style:normal; font-size:.5em; color:var(--silver-dim); margin:0 .3em; vertical-align:.2em}
+.hero-foot .hd{margin-top:10px; font-size:10.5px; color:var(--powder-soft)}
+.cue{display:block; width:1px; height:38px; margin:18px auto 0; background:linear-gradient(var(--silver),transparent); opacity:.7;
+  animation:cue 2.4s ease-in-out infinite}
+@keyframes cue{0%{transform:scaleY(0); transform-origin:top}45%{transform:scaleY(1); transform-origin:top}55%{transform:scaleY(1); transform-origin:bottom}100%{transform:scaleY(0); transform-origin:bottom}}
+.js .rise{opacity:0; transform:translateY(16px); transition:opacity 1.1s ease var(--d,0s), transform 1.3s cubic-bezier(.2,.7,.2,1) var(--d,0s)}
+.revealed .rise{opacity:1; transform:none}
+
+/* ============ INVITATION ============ */
+.wrap{width:min(100% - 40px, 560px); margin-inline:auto}
+.wrap.wide{width:min(100% - 32px, 1040px)}
+.invite{padding:72px 0 88px; text-align:center; position:relative}
+.bism{font-family:var(--arabic); font-size:24px; line-height:1.6; color:var(--powder-soft); direction:rtl}
+.invite .arch{width:clamp(108px,30vw,138px); margin:26px auto 30px}
+.arch{overflow:visible}
+.arch .ln{fill:none; stroke:url(#silverG); stroke-width:1.3}
+.arch .ln.thin{stroke-width:.6; opacity:.75}
+.arch .fin{fill:url(#silverG)}
+.arch text{font-family:var(--caps); font-size:21px; fill:#E6EBF1; letter-spacing:0}
+.arch .halo{fill:url(#lampGlow)}
+.js .arch .draw{stroke-dasharray:1; stroke-dashoffset:1}
+.js .arch.in .draw,.revealed .plaque .arch .draw{stroke-dashoffset:0; transition:stroke-dashoffset 2.6s cubic-bezier(.55,0,.25,1) var(--d,0s)}
+.js .arch .mono{opacity:0}
+.js .arch.in .mono{opacity:1; transition:opacity 1.2s ease 1.5s}
+.gate .arch .draw{stroke-dasharray:none}
+.gate .arch .mono{opacity:1}
+.host{font-size:13px; letter-spacing:.3em; color:var(--text)}
+.host2{font-style:italic; font-size:19px; color:var(--text-dim); margin-top:2px}
+.req{font-style:italic; font-size:19px; line-height:1.45; color:var(--text-dim); margin-top:16px}
+.names{font-family:var(--display); font-weight:400; font-style:italic; font-size:clamp(50px,15vw,84px); line-height:1.02; margin:22px 0 4px;
+  display:flex; flex-direction:column; align-items:center}
+.names .amp{font-family:var(--caps); font-style:normal; font-size:.34em; color:var(--lamp); letter-spacing:0; margin:.12em 0 .2em}
+.parentage{display:flex; flex-direction:column; align-items:center; gap:3px; margin-top:14px}
+.parentage .po{font-style:italic; font-size:16px; color:var(--text-dim)}
+.parentage .pn{font-size:12px; letter-spacing:.26em}
+.rule{display:block; width:200px; height:auto; margin:34px auto 30px}
+.rule path{stroke:var(--silver-dim)}
+.rule .gem{fill:var(--lamp); stroke:none}
+.on{font-style:italic; font-size:18px; color:var(--text-dim)}
+.date{display:flex; align-items:center; justify-content:center; gap:18px; margin-top:12px}
+.date .dd,.date .dm{font-size:11px; letter-spacing:.3em; color:var(--powder-soft); width:96px}
+.date .dd{text-align:right; padding-right:16px; border-right:1px solid rgba(217,222,229,.35)}
+.date .dm{text-align:left; padding-left:16px; border-left:1px solid rgba(217,222,229,.35); line-height:1.7}
+.date .dn{font-family:var(--display); font-size:66px; line-height:1; font-weight:400}
+.city{margin-top:22px; font-size:11px; color:var(--text-dim)}
+.count{margin-top:22px; font-style:italic; font-size:17px; color:var(--lamp)}
+.count .num{font-style:normal; font-family:var(--display); font-size:20px; font-variant-numeric:lining-nums tabular-nums}
+.count[hidden]{display:none}
+
+/* sequin glints */
+.glint{position:absolute; width:10px; height:10px; pointer-events:none; opacity:0; animation:glint 4.6s ease-in-out infinite var(--g,0s)}
+.glint::before,.glint::after{content:""; position:absolute; left:50%; top:50%; background:linear-gradient(var(--dir,180deg),transparent,#EEF2F6,transparent); transform:translate(-50%,-50%)}
+.glint::after{--dir:90deg}
+.glint::before{width:1px; height:100%}
+.glint::after{width:100%; height:1px}
+@keyframes glint{0%,70%,100%{opacity:0; transform:scale(.3)}80%{opacity:.85; transform:scale(1)}}
+
+/* ============ STORY ============ */
+.story{padding:40px 0 90px; text-align:center}
+.eyebrow{font-size:10.5px; color:var(--powder)}
+.h2{font-family:var(--display); font-style:italic; font-weight:400; font-size:clamp(34px,9vw,48px); line-height:1.12; margin-top:10px}
+.frames{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:40px; text-align:left; align-items:start}
+.frame{position:relative; overflow:hidden}
+.frame img{width:100%; height:auto; aspect-ratio:4/5; object-fit:cover}
+.frame.f1{grid-column:1 / -1}
+.frame.f1 img{aspect-ratio:4/4.4}
+.frame.f3{margin-top:44px}
+.frame figcaption{position:absolute; left:0; right:0; bottom:0; padding:56px 16px 16px; background:linear-gradient(180deg,transparent,rgba(9,14,22,.78)); font-family:var(--caps); text-transform:uppercase; font-size:9.5px; letter-spacing:.3em;
+  line-height:2; color:#F1F4F8; text-shadow:0 1px 8px rgba(0,0,0,.55)}
+.frame.f2 figcaption,.frame.f3 figcaption{padding:44px 12px 12px; font-size:8.5px}
+.frame figcaption::after{content:""; display:block; width:22px; height:1px; background:currentColor; opacity:.8; margin-top:8px}
+.js .frame.reveal img{clip-path:inset(100% 0 0 0); transform:scale(1.12); filter:blur(6px);
+  transition:clip-path 1.6s cubic-bezier(.6,0,.2,1) var(--d,0s), transform 2.4s cubic-bezier(.2,.6,.2,1) var(--d,0s), filter 1.6s ease var(--d,0s)}
+.js .frame.reveal.in img{clip-path:inset(0 0 0 0); transform:none; filter:none}
+.js .frame.reveal figcaption{opacity:0; transition:opacity 1s ease calc(var(--d,0s) + 1.1s)}
+.js .frame.reveal.in figcaption{opacity:1}
+.seasons{margin-top:44px; display:flex; align-items:center; justify-content:center; gap:10px; font-size:8.5px; letter-spacing:.2em; color:var(--text-dim); white-space:nowrap}
+.seasons i{width:1px; height:12px; background:var(--silver-dim)}
+
+/* ============ DUA ============ */
+.dua{padding:80px 0 90px; text-align:center; background:radial-gradient(60% 50% at 50% 45%, rgba(231,198,144,.09), transparent 70%)}
+.dua .ar{font-family:var(--arabic); font-size:clamp(25px,7vw,34px); line-height:1.9; color:var(--powder-soft); direction:rtl}
+.dua .tr{font-style:italic; font-size:20px; line-height:1.5; margin:22px auto 0; max-width:30ch; text-wrap:balance}
+.dua .src{margin-top:18px; font-style:italic; font-size:16px; color:var(--text-dim)}
+.dua .src span{font-family:var(--arabic); font-style:normal}
+.dua .ref{margin-top:6px; font-size:10px; color:var(--silver-dim)}
+.lamp{display:block; width:26px; height:auto; margin:0 auto 26px}
+
+/* ============ EVENT ============ */
+.event{padding:30px 0 90px; text-align:center}
+.insha{display:flex; flex-direction:column; align-items:center; margin-top:18px}
+.insha .ar{font-family:var(--arabic); font-size:clamp(30px,8.4vw,38px); line-height:1.55; direction:rtl; color:var(--lamp);
+  display:flex; align-items:center; gap:16px}
+.insha .ar::before,.insha .ar::after{content:""; width:6px; height:6px; transform:rotate(45deg); border:1px solid var(--lamp-dim); flex:none}
+.insha .tr{font-style:italic; font-size:15px; letter-spacing:.06em; color:var(--text-dim)}
+.card{position:relative; margin:34px auto 0; max-width:500px; padding:30px 26px 32px;
+  background:linear-gradient(170deg,rgba(169,189,210,.16),rgba(169,189,210,.06)); border:1px solid rgba(217,222,229,.16);
+  box-shadow:0 30px 60px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.06)}
+.card .band{display:block; width:100%; height:18px}
+.card .ev{font-family:var(--display); font-style:italic; font-weight:400; font-size:48px; line-height:1.1; margin:14px 0 18px}
+.ledger{display:grid; gap:12px; text-align:left}
+.row{display:flex; align-items:baseline}
+.row dt{flex:1; display:flex; align-items:baseline; font-family:var(--caps); font-size:10px; letter-spacing:.26em; text-transform:uppercase; color:var(--powder)}
+.row dt::after{content:""; flex:1; min-width:14px; margin:0 10px; border-bottom:1px dotted rgba(169,189,210,.45); transform:translateY(-4px)}
+.row dd{font-size:19px; text-align:right; line-height:1.25}
+.row dd small{display:block; font-size:15px; font-style:italic; color:var(--text-dim)}
+.acts{display:flex; gap:10px; justify-content:center; margin:26px 0 22px; flex-wrap:wrap}
+.btn{display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:44px; padding:0 18px; font-family:var(--caps);
+  font-size:10.5px; letter-spacing:.24em; text-transform:uppercase; text-decoration:none; border:1px solid rgba(217,222,229,.5); color:var(--text);
+  transition:background .25s, border-color .25s}
+.btn:hover{background:rgba(217,222,229,.08); border-color:var(--silver)}
+.btn.solid{background:var(--powder); color:var(--ink); border-color:var(--powder)}
+.btn.solid:hover{background:var(--powder-soft)}
+.btn:focus-visible,.cbtn:focus-visible,.replay:focus-visible,.music:focus-visible{outline:2px solid var(--lamp); outline-offset:3px}
+.tz{margin-top:22px; font-style:italic; font-size:16px; color:var(--text-dim)}
+
+/* ============ CLOSING ============ */
+.closing{padding:40px 0 70px; text-align:center}
+.hope{font-family:var(--display); font-style:italic; font-size:clamp(26px,7vw,34px); line-height:1.3}
+.with{margin-top:30px; font-size:10.5px; color:var(--powder)}
+.parents{margin-top:12px; font-size:14px; letter-spacing:.24em; line-height:1.9}
+.closing .arch{width:92px; margin:38px auto 0}
+.contact{margin-top:52px}
+.q-head{font-size:11px; color:var(--powder); margin-top:6px}
+.contacts{list-style:none; display:grid; gap:12px; margin-top:22px; text-align:left}
+.ct{display:grid; grid-template-columns:1fr auto; align-items:center; gap:2px 12px; padding:13px 12px 13px 15px;
+  background:rgba(169,189,210,.06); border:1px solid rgba(217,222,229,.12)}
+.ct-name{font-size:18px; line-height:1.25}
+.ct-num{grid-row:2; font-size:14px; color:var(--text-dim); letter-spacing:.04em; font-variant-numeric:lining-nums tabular-nums}
+.ct-acts{grid-row:1 / span 2; grid-column:2; display:flex; gap:8px}
+.cbtn{display:inline-flex; align-items:center; justify-content:center; min-height:40px; min-width:44px; padding:0 10px; font-family:var(--caps);
+  font-size:9px; letter-spacing:.12em; text-transform:uppercase; text-decoration:none; border:1px solid rgba(217,222,229,.4)}
+.cbtn.wa{background:var(--powder); color:var(--ink); border-color:var(--powder)}
+.replay{margin-top:46px; min-height:44px; padding:0 20px; background:none; border:1px solid rgba(217,222,229,.35); color:var(--text);
+  font-family:var(--caps); font-size:10.5px; letter-spacing:.26em; text-transform:uppercase; cursor:pointer}
+.replay:hover{background:rgba(217,222,229,.08)}
+.foot{margin-top:40px; font-size:10px; color:var(--silver-dim)}
+
+.js .reveal{opacity:0; transform:translateY(18px); transition:opacity 1s ease var(--d,0s), transform 1.2s cubic-bezier(.2,.7,.2,1) var(--d,0s)}
+.js .reveal.in{opacity:1; transform:none}
+.js .frame.reveal{opacity:1; transform:none}
+
+/* music */
+.music{position:fixed; right:16px; bottom:16px; z-index:40; width:46px; height:46px; border-radius:50%; border:1px solid rgba(217,222,229,.35);
+  background:rgba(14,21,32,.72); -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px); display:flex; align-items:flex-end; justify-content:center;
+  gap:3px; padding-bottom:15px; cursor:pointer}
+.music[hidden]{display:none}
+.music i{width:2px; height:14px; background:var(--silver); transform-origin:bottom; animation:eq 1.1s ease-in-out infinite}
+.music i:nth-child(2){animation-delay:-.4s}.music i:nth-child(3){animation-delay:-.75s}.music i:nth-child(4){animation-delay:-.2s}
+.music.muted i{animation:none; transform:scaleY(.18)}
+@keyframes eq{0%,100%{transform:scaleY(.25)}50%{transform:scaleY(1)}}
+
+@media (min-width:720px){
+  .frames{grid-template-columns:1.15fr 1fr 1fr; gap:18px; align-items:start}
+  .frame.f1{grid-column:auto}
+  .frame.f1 img{aspect-ratio:4/5}
+  .frame.f2{margin-top:70px}
+  .frame.f3{margin-top:24px}
+  .frame.f2 figcaption,.frame.f3 figcaption{padding:56px 16px 16px; font-size:9.5px}
+  .contacts{max-width:480px; margin-inline:auto}
+  .names{flex-direction:row; gap:.25em; align-items:baseline}
+  .names .amp{margin:0}
+  .card{padding:36px 40px 38px}
+}
+@media (prefers-reduced-motion:reduce){
+  .js .rise,.js .reveal{opacity:1!important; transform:none!important; transition:none!important}
+  .js .frame.reveal img{clip-path:none!important; transform:none!important; filter:none!important}
+  .js .frame.reveal figcaption{opacity:1!important}
+  .js .arch .draw{stroke-dashoffset:0!important}
+  .js .arch .mono{opacity:1!important}
+  .hero img{transform:none!important; transition:none!important}
+  .glint,.cue,.plaque .tap,.music i{animation:none!important}
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js','gated');setTimeout(function(){if(!window.__invReady){document.documentElement.classList.remove('gated','js')}},3500);</script>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="silverG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F5F7FA"/><stop offset=".35" stop-color="#AEB8C5"/><stop offset=".6" stop-color="#EEF1F5"/><stop offset="1" stop-color="#8D98A7"/></linearGradient><radialGradient id="lampGlow"><stop offset="0" stop-color="#E7C690" stop-opacity=".16"/><stop offset="1" stop-color="#E7C690" stop-opacity="0"/></radialGradient></defs></svg>
+<div class="gate" id="gate" role="button" tabindex="0" aria-label="Lift the veil to open the invitation">
+  <div class="haze"></div>
+  <canvas id="veil" aria-hidden="true"></canvas>
+  <div class="plaque">
+    <svg class="arch" viewBox="-50 -82 100 152" aria-hidden="true">
+  <ellipse class="halo" cx="0" cy="-30" rx="44" ry="44"/>
+  <path class="ln draw" pathLength="1" d="M-40,64 V-4 C-40,-30 -18,-40 0,-62 C18,-40 40,-30 40,-4 V64"/>
+  <path class="ln thin draw" pathLength="1" d="M-34,64 V-3 C-34,-25 -15,-34 0,-53 C15,-34 34,-25 34,-3 V64"/>
+  <path class="ln draw" pathLength="1" d="M-47,64 H47"/>
+  <path class="ln thin draw" pathLength="1" d="M0,-53 V-38"/>
+  <path class="fin" d="M0,-80 L2.2,-72 L0,-64 L-2.2,-72Z"/>
+  <path class="fin" d="M0,-41 L3.2,-35.5 L0,-28 L-3.2,-35.5Z" opacity=".9"/>
+  <g class="mono"><text x="-16" y="17" text-anchor="middle">H</text><path class="fin" d="M0,5 L1.5,8.6 L5.4,10 L1.5,11.4 L0,15 L-1.5,11.4 L-5.4,10 L-1.5,8.6Z"/><text x="16" y="17" text-anchor="middle">A</text></g>
+</svg>
+    <p class="of caps">The Walima of</p>
+    <p class="pn">Haider<i>&amp;</i>Ayesha</p>
+    <p class="tap caps">Tap to lift the veil</p>
+    <p class="snd" id="snd">Best with sound on</p>
+  </div>
+</div>
+
+<main>
+  <header class="hero">
+    <picture>
+      <source media="(min-aspect-ratio: 1/1)" srcset="img/hero-wide.webp" type="image/webp">
+      <source srcset="img/hero-tall.webp" type="image/webp">
+      <img src="img/hero-tall.jpg" alt="Haider and Ayesha on a rooftop at night, foreheads touching" width="1100" height="1466" fetchpriority="high">
+    </picture>
+    <div class="shade"></div>
+    <div class="hero-top">
+      <p class="kicker caps rise" style="--d:.2s">Walima</p>
+      <p class="tag caps rise" style="--d:.5s">Same souls<br>a brighter chapter</p>
+      <span class="tick rise" style="--d:.7s"></span>
+    </div>
+    <div class="hero-foot">
+      <p class="hn rise" style="--d:.9s">Haider<i>&amp;</i>Ayesha</p>
+      <p class="hd caps rise" style="--d:1.1s">Sunday &middot; 24 January 2027</p>
+      <span class="cue rise" style="--d:1.5s"></span>
+    </div>
+  </header>
+
+  <section class="invite night" aria-label="Invitation">
+    <span class="glint" style="left:18%;top:9%;--g:0s"></span><span class="glint" style="left:82%;top:14%;--g:1.3s"></span><span class="glint" style="left:12%;top:38%;--g:2.6s"></span><span class="glint" style="left:88%;top:44%;--g:0.7s"></span><span class="glint" style="left:24%;top:70%;--g:3.4s"></span><span class="glint" style="left:77%;top:77%;--g:1.9s"></span>
+    <div class="wrap">
+      <p class="bism reveal" lang="ar" dir="rtl">بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
+      <svg class="arch reveal" viewBox="-50 -82 100 152" aria-hidden="true" style="--d:0.1s">
+  <ellipse class="halo" cx="0" cy="-30" rx="44" ry="44"/>
+  <path class="ln draw" pathLength="1" d="M-40,64 V-4 C-40,-30 -18,-40 0,-62 C18,-40 40,-30 40,-4 V64"/>
+  <path class="ln thin draw" pathLength="1" d="M-34,64 V-3 C-34,-25 -15,-34 0,-53 C15,-34 34,-25 34,-3 V64"/>
+  <path class="ln draw" pathLength="1" d="M-47,64 H47"/>
+  <path class="ln thin draw" pathLength="1" d="M0,-53 V-38"/>
+  <path class="fin" d="M0,-80 L2.2,-72 L0,-64 L-2.2,-72Z"/>
+  <path class="fin" d="M0,-41 L3.2,-35.5 L0,-28 L-3.2,-35.5Z" opacity=".9"/>
+  <g class="mono"><text x="-16" y="17" text-anchor="middle">H</text><path class="fin" d="M0,5 L1.5,8.6 L5.4,10 L1.5,11.4 L0,15 L-1.5,11.4 L-5.4,10 L-1.5,8.6Z"/><text x="16" y="17" text-anchor="middle">A</text></g>
+</svg>
+      <p class="host caps reveal">Mr. Mushtaq Ahmad Khan</p>
+      <p class="host2 reveal">&amp; Family</p>
+      <p class="req reveal" style="--d:.1s">request the pleasure of your company<br>at the Walima of</p>
+      <h1 class="names reveal" style="--d:.15s"><span>Haider</span><span class="amp">&amp;</span><span>Ayesha</span></h1>
+      <p class="parentage reveal" style="--d:.2s"><span class="po">daughter of</span><span class="pn caps">Mr. &amp; Mrs. Mehboob Alam</span></p>
+      <div class="reveal"><svg class="rule" viewBox="0 0 200 14" aria-hidden="true"><path d="M4,7 H84 M116,7 H196" stroke-width=".8"/><circle cx="89" cy="7" r="1.3" fill="#8F9AAA"/><circle cx="111" cy="7" r="1.3" fill="#8F9AAA"/><path class="gem" d="M100,1 L106,7 L100,13 L94,7Z"/></svg></div>
+      <p class="on reveal">Please join us on</p>
+      <div class="date reveal" style="--d:.1s"><span class="dd caps">Sunday</span><span class="dn">24</span><span class="dm caps">January<br>2027</span></div>
+      <p class="city caps reveal" style="--d:.15s">Sumbal Chak &middot; Lahore</p>
+      <p class="count reveal" id="count" style="--d:.2s"><span class="num" id="days">&nbsp;</span> <span id="days-label">days until the Walima</span></p>
+    </div>
+  </section>
+
+  <section class="story night" aria-labelledby="seasons-h">
+    <div class="wrap wide">
+      <p class="eyebrow caps reveal">Our Story</p>
+      <h2 class="h2 reveal" id="seasons-h" style="--d:.1s">Every season, together</h2>
+      <div class="frames">
+        <figure class="frame f1 reveal"><img src="img/pines.webp" alt="Haider and Ayesha among pine trees in the mountains" width="900" height="1125" loading="lazy" decoding="async">
+          <figcaption>Some stories<br>feel like<br>home</figcaption></figure>
+        <figure class="frame f2 reveal" style="--d:.15s"><img src="img/maroon.webp" alt="Haider kissing Ayesha's forehead, she is in maroon with a gold matha patti" width="900" height="1125" loading="lazy" decoding="async">
+          <figcaption>A quieter<br>kind of love</figcaption></figure>
+        <figure class="frame f3 reveal" style="--d:.3s"><img src="img/pink.webp" alt="Ayesha in a pink dupatta smiling as Haider kisses her cheek" width="900" height="1125" loading="lazy" decoding="async">
+          <figcaption>You, me,<br>always</figcaption></figure>
+      </div>
+      <p class="seasons caps reveal"><span>Same souls</span><i></i><span>Different seasons</span><i></i><span>Forever ours</span></p>
+    </div>
+  </section>
+
+  <section class="dua" aria-label="A dua for the couple">
+    <div class="wrap">
+      <div class="reveal"><svg class="lamp" viewBox="0 0 26 58" aria-hidden="true"><path d="M13,0 V12" stroke="#B99A6A" stroke-width=".8"/><path d="M13,12 C21,18 23,27 13,41 C3,27 5,18 13,12Z" fill="rgba(231,198,144,.14)" stroke="#E7C690" stroke-width=".9"/><circle cx="13" cy="28" r="3.2" fill="#E7C690"/><circle cx="13" cy="28" r="8" fill="#E7C690" opacity=".16"/><path d="M13,41 V50" stroke="#B99A6A" stroke-width=".8"/><path d="M13,50 L15.5,54 L13,58 L10.5,54Z" fill="#E7C690"/></svg></div>
+      <p class="ar reveal" lang="ar" dir="rtl">بَارَكَ ٱللَّهُ لَكُمَا وَبَارَكَ عَلَيْكُمَا<br>وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ</p>
+      <p class="tr reveal" style="--d:.15s">&ldquo;May Allah bless you both, shower His blessings upon you, and unite you both in goodness.&rdquo;</p>
+      <p class="src reveal" style="--d:.25s">A dua of the Prophet <span lang="ar">&#xFDFA;</span> for newlyweds</p>
+      <p class="ref caps reveal" style="--d:.3s">Sunan Ab&#299; D&#257;w&#363;d &middot; 2130</p>
+    </div>
+  </section>
+
+  <section class="event night" aria-labelledby="walima-h">
+    <div class="wrap">
+      <p class="eyebrow caps reveal">The Celebration</p>
+      <div class="insha reveal" style="--d:.1s">
+        <p class="ar" lang="ar" dir="rtl">إِنْ شَاءَ ٱللَّٰهُ</p>
+        <p class="tr">In sh&#257;&rsquo; All&#257;h</p>
+      </div>
+      <article class="card reveal" style="--d:.15s" aria-label="Walima details">
+        <svg class="band" aria-hidden="true"><defs><pattern id="emb" width="24" height="18" patternUnits="userSpaceOnUse"><path d="M0,9 C6,1.5 18,1.5 24,9 M0,9 C6,16.5 18,16.5 24,9" fill="none" stroke="#C9D2DD" stroke-width=".7"/><circle cx="12" cy="9" r="1.4" fill="#E7C690"/><circle cx="0" cy="9" r=".9" fill="#C9D2DD"/><circle cx="24" cy="9" r=".9" fill="#C9D2DD"/></pattern></defs><rect y="0" width="100%" height=".8" fill="#C9D2DD"/><rect y="0" width="100%" height="18" fill="url(#emb)"/><rect y="17.2" width="100%" height=".8" fill="#C9D2DD"/></svg>
+        <h2 class="ev" id="walima-h">Walima</h2>
+        <dl class="ledger">
+          <div class="row"><dt>Date</dt><dd>Sunday, 24 January 2027</dd></div>
+          <div class="row"><dt>Time</dt><dd>2:00 pm onwards</dd></div>
+          <div class="row"><dt>Venue</dt><dd>Sumbal Chak<small>Lahore</small></dd></div>
+        </dl>
+        <div class="acts">
+          <a class="btn solid" href="https://maps.app.goo.gl/W8DvQs2MbgQKp2qB8?g_st=ic" target="_blank" rel="noopener">Directions <span aria-hidden="true">&#8599;</span></a>
+          <a class="btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Walima%20of%20Haider%20%26%20Ayesha&amp;dates=20270124T140000%2F20270124T180000&amp;ctz=Asia%2FKarachi&amp;location=Sumbal%20Chak%2C%20Lahore&amp;details=Directions%3A%20https%3A//maps.app.goo.gl/W8DvQs2MbgQKp2qB8%3Fg_st%3Dic" target="_blank" rel="noopener">Add to calendar</a>
+        </div>
+        <svg class="band" aria-hidden="true"><defs><pattern id="emb" width="24" height="18" patternUnits="userSpaceOnUse"><path d="M0,9 C6,1.5 18,1.5 24,9 M0,9 C6,16.5 18,16.5 24,9" fill="none" stroke="#C9D2DD" stroke-width=".7"/><circle cx="12" cy="9" r="1.4" fill="#E7C690"/><circle cx="0" cy="9" r=".9" fill="#C9D2DD"/><circle cx="24" cy="9" r=".9" fill="#C9D2DD"/></pattern></defs><rect y="0" width="100%" height=".8" fill="#C9D2DD"/><rect y="0" width="100%" height="18" fill="url(#emb)"/><rect y="17.2" width="100%" height=".8" fill="#C9D2DD"/></svg>
+      </article>
+      <p class="tz reveal">All times are Pakistan Standard Time.</p>
+    </div>
+  </section>
+
+  <section class="closing night" aria-label="With love">
+    <div class="wrap">
+      <p class="hope reveal">Come, share in our joy,<br>and keep us in your duas.</p>
+      <p class="with caps reveal" style="--d:.1s">With love and gratitude</p>
+      <p class="parents caps reveal" style="--d:.15s">Mr. &amp; Mrs.<br>Asif Mushtaq Khan</p>
+      <svg class="arch reveal" viewBox="-50 -82 100 152" aria-hidden="true" style="--d:0.2s">
+  <ellipse class="halo" cx="0" cy="-30" rx="44" ry="44"/>
+  <path class="ln draw" pathLength="1" d="M-40,64 V-4 C-40,-30 -18,-40 0,-62 C18,-40 40,-30 40,-4 V64"/>
+  <path class="ln thin draw" pathLength="1" d="M-34,64 V-3 C-34,-25 -15,-34 0,-53 C15,-34 34,-25 34,-3 V64"/>
+  <path class="ln draw" pathLength="1" d="M-47,64 H47"/>
+  <path class="ln thin draw" pathLength="1" d="M0,-53 V-38"/>
+  <path class="fin" d="M0,-80 L2.2,-72 L0,-64 L-2.2,-72Z"/>
+  <path class="fin" d="M0,-41 L3.2,-35.5 L0,-28 L-3.2,-35.5Z" opacity=".9"/>
+  <g class="mono"><text x="-16" y="17" text-anchor="middle">H</text><path class="fin" d="M0,5 L1.5,8.6 L5.4,10 L1.5,11.4 L0,15 L-1.5,11.4 L-5.4,10 L-1.5,8.6Z"/><text x="16" y="17" text-anchor="middle">A</text></g>
+</svg>
+      <div class="contact" role="group" aria-labelledby="queries">
+        <div class="reveal"><svg class="rule" viewBox="0 0 200 14" aria-hidden="true"><path d="M4,7 H84 M116,7 H196" stroke-width=".8"/><circle cx="89" cy="7" r="1.3" fill="#8F9AAA"/><circle cx="111" cy="7" r="1.3" fill="#8F9AAA"/><path class="gem" d="M100,1 L106,7 L100,13 L94,7Z"/></svg></div>
+        <h2 id="queries" class="q-head caps reveal">For any queries</h2>
+        <ul class="contacts reveal" style="--d:.1s">
+          <li class="ct" data-k="0"><span class="ct-name">Asif Mushtaq Khan</span><span class="ct-num" aria-live="polite"></span><span class="ct-acts"><a class="cbtn wa" data-a="wa">WhatsApp</a><a class="cbtn" data-a="tel">Call</a></span></li>
+          <li class="ct" data-k="1"><span class="ct-name">M. Waqas Khan</span><span class="ct-num" aria-live="polite"></span><span class="ct-acts"><a class="cbtn wa" data-a="wa">WhatsApp</a><a class="cbtn" data-a="tel">Call</a></span></li>
+          <li class="ct" data-k="2"><span class="ct-name">Emaan-e-Zahra Khan</span><span class="ct-num" aria-live="polite"></span><span class="ct-acts"><a class="cbtn wa" data-a="wa">WhatsApp</a><a class="cbtn" data-a="tel">Call</a></span></li>
+          <li class="ct" data-k="3"><span class="ct-name">M. Hussain Asif Khan</span><span class="ct-num" aria-live="polite"></span><span class="ct-acts"><a class="cbtn wa" data-a="wa">WhatsApp</a><a class="cbtn" data-a="tel">Call</a></span></li>
+          <li class="ct" data-k="4"><span class="ct-name">M. Shahmeer Khan</span><span class="ct-num" aria-live="polite"></span><span class="ct-acts"><a class="cbtn wa" data-a="wa">WhatsApp</a><a class="cbtn" data-a="tel">Call</a></span></li>
+        </ul>
+      </div>
+      <button class="replay reveal" id="replay" type="button">Return to the veil</button>
+      <p class="foot caps">Lahore &middot; MMXXVII</p>
+    </div>
+  </section>
+</main>
+<button class="music" id="music" type="button" aria-label="Mute music" aria-pressed="false" hidden><i></i><i></i><i></i><i></i></button>
+
+<script>(function () {
+  window.__invReady = true;
+  var de = document.documentElement;
+  var reduce = !!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches);
+  var revealed = false;
+
+  /* ---------------- countdown to 2:00 pm PKT, Sunday 24 January 2027 ---------------- */
+  var START = Date.UTC(2027, 0, 24, 9, 0), END = START + 5 * 3600 * 1000;
+  function countdown() {
+    var box = document.getElementById('count'), num = document.getElementById('days'), lbl = document.getElementById('days-label');
+    if (!box || !num || !lbl) return;
+    var now = Date.now();
+    if (now >= END) { box.hidden = true; return; }
+    if (now >= START - 24 * 3600 * 1000) { num.textContent = ''; lbl.textContent = now < START - 12 * 3600 * 1000 ? 'The Walima is tomorrow' : 'The Walima is today'; return; }
+    var d = Math.ceil((START - now) / 86400000);
+    lbl.textContent = (d === 1 ? 'day' : 'days') + ' until the Walima';
+    if (reduce) { num.textContent = d; return; }
+    var t0 = performance.now();
+    (function step(t) {
+      var p = Math.min(1, (t - t0) / 1600), e = 1 - Math.pow(1 - p, 3);
+      num.textContent = Math.round(d * e);
+      if (p < 1) requestAnimationFrame(step);
+    })(t0);
+  }
+  function reveal() {
+    if (revealed) return;
+    revealed = true;
+    de.classList.add('revealed');
+  }
+
+  /* ---------------- the veil: a sheer powder-blue dupatta with silver sequins (verlet cloth) ---------------- */
+  function makeVeil(canvas) {
+    var ctx = canvas.getContext('2d');
+    if (!ctx) return null;
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    var W = 0, H = 0, COLS = 17, ROWS = 24, pts = [], cons = [], seq = [], restW = 1, restH = 1;
+    var raf = 0, running = false, last = 0, T = 0;
+    var lifting = false, liftT = 0, grab = [], gx0 = 0, gy0 = 0, gx1 = 0, released = false;
+    var ptr = { x: -1e4, y: -1e4, vx: 0, vy: 0, t: -9 };
+    function seeded(s) { return function () { s = (s * 16807) % 2147483647; return (s - 1) / 2147483646; }; }
+
+    function build() {
+      W = window.innerWidth; H = window.innerHeight;
+      canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr);
+      COLS = W > 900 ? 25 : 17; ROWS = W > 900 ? 22 : 26;
+      var x0 = -W * .07, x1 = W * 1.07, y0 = -H * .03, y1 = H * .925;
+      restW = (x1 - x0) / (COLS - 1); restH = (y1 - y0) / (ROWS - 1);
+      pts = []; cons = [];
+      for (var j = 0; j < ROWS; j++) for (var i = 0; i < COLS; i++) {
+        var x = x0 + restW * i, y = y0 + restH * j;
+        pts.push({ x: x, y: y, px: x, py: y, pin: j === 0 });
+      }
+      function link(a, b, r) { cons.push([a, b, r]); }
+      for (j = 0; j < ROWS; j++) for (i = 0; i < COLS; i++) {
+        var k = j * COLS + i;
+        if (i < COLS - 1) link(k, k + 1, restW);
+        if (j < ROWS - 1) link(k, k + COLS, restH);
+      }
+      var rnd = seeded(11), n = Math.min(Math.max(Math.round(W * H / 2300), 160), 460);
+      seq = [];
+      for (var s = 0; s < n; s++) seq.push({
+        i: Math.floor(rnd() * (COLS - 1)), j: Math.min(ROWS - 2, Math.floor(Math.pow(rnd(), .62) * (ROWS - 1))),
+        u: rnd(), v: rnd(), r: .55 + rnd() * 1.15, ph: rnd() * 6.283, w: .5 + rnd() * 1.5
+      });
+      lifting = false; released = false; grab = []; liftT = 0; T = 0;
+    }
+
+    function step(dt) {
+      T += dt;
+      var g = released ? -1150 : 420, dt2 = dt * dt, fresh = (T - ptr.t) < .12;
+      if (lifting) {
+        liftT += dt;
+        var u = Math.min(1, liftT / 1.7), e = u < .5 ? 4 * u * u * u : 1 - Math.pow(-2 * u + 2, 3) / 2;
+        var tx = gx0 + (gx1 - gx0) * e, ty = gy0 + (-H * .55 - gy0) * e;
+        for (var q = 0; q < grab.length; q++) {
+          var gp = pts[grab[q].k];
+          gp.x = tx + grab[q].ox * (1 - e * .55); gp.y = ty + grab[q].oy;
+          gp.px = gp.x; gp.py = gp.y;
+        }
+        if (liftT > .75 && !released) {
+          released = true;
+          for (var c0 = 0; c0 < COLS; c0++) pts[c0].pin = false;
+        }
+      }
+      for (var k = 0; k < pts.length; k++) {
+        var p = pts[k];
+        if (p.pin) continue;
+        var vx = (p.x - p.px) * .984, vy = (p.y - p.py) * .984;
+        var ax = Math.sin(T * .8 + p.y * .005 + p.x * .002) * 16 + Math.sin(T * 1.9 + p.x * .011) * 7;
+        if (fresh) {
+          var dx = p.x - ptr.x, dy = p.y - ptr.y, d2 = dx * dx + dy * dy, R = 130;
+          if (d2 < R * R) { var f = 1 - Math.sqrt(d2) / R; vx += ptr.vx * f * .035; vy += ptr.vy * f * .02; }
+        }
+        p.px = p.x; p.py = p.y;
+        p.x += vx + ax * dt2; p.y += vy + g * dt2;
+      }
+      for (var it = 0; it < 6; it++) {
+        for (var c = 0; c < cons.length; c++) {
+          var A = pts[cons[c][0]], B = pts[cons[c][1]];
+          if (A.pin && B.pin) continue;
+          var ddx = B.x - A.x, ddy = B.y - A.y, d = Math.sqrt(ddx * ddx + ddy * ddy) || 1e-6;
+          var diff = (d - cons[c][2]) / d, wa = A.pin ? 0 : (B.pin ? 1 : .5), wb = B.pin ? 0 : (A.pin ? 1 : .5);
+          A.x += ddx * diff * wa; A.y += ddy * diff * wa;
+          B.x -= ddx * diff * wb; B.y -= ddy * diff * wb;
+        }
+      }
+    }
+
+    /* the fabric is painted small and scaled up: bilinear smoothing turns the cloth mesh into soft, sheer folds */
+    var DS = 7, off = document.createElement('canvas'), octx = off.getContext('2d');
+    function draw() {
+      var ow = Math.ceil(W / DS) + 2, oh = Math.ceil(H / DS) + 2;
+      if (off.width !== ow || off.height !== oh) { off.width = ow; off.height = oh; }
+      octx.setTransform(1 / DS, 0, 0, 1 / DS, 0, 0);
+      octx.clearRect(0, 0, W + DS * 2, H + DS * 2);
+      /* 1) the whole veil as one seamless shape */
+      octx.beginPath();
+      for (var j = 0; j < ROWS - 1; j++) for (var i = 0; i < COLS - 1; i++) {
+        var k = j * COLS + i, a = pts[k], bb = pts[k + 1], c = pts[k + COLS + 1], d = pts[k + COLS];
+        var cw = (bb.x - a.x) * (d.y - a.y) - (bb.y - a.y) * (d.x - a.x);
+        if (cw >= 0) { octx.moveTo(a.x, a.y); octx.lineTo(bb.x, bb.y); octx.lineTo(c.x, c.y); octx.lineTo(d.x, d.y); }
+        else { octx.moveTo(a.x, a.y); octx.lineTo(d.x, d.y); octx.lineTo(c.x, c.y); octx.lineTo(bb.x, bb.y); }
+        octx.closePath();
+      }
+      octx.fillStyle = 'rgba(152,180,214,.34)';
+      octx.fill();
+      /* 2) folds and gathers catch more light: a soft overlay where the cloth bunches or turns */
+      for (j = 0; j < ROWS - 1; j++) for (i = 0; i < COLS - 1; i++) {
+        k = j * COLS + i; a = pts[k]; bb = pts[k + 1]; c = pts[k + COLS + 1]; d = pts[k + COLS];
+        var w = ((bb.x - a.x) + (c.x - d.x)) / 2 / restW, h = ((d.y - a.y) + (c.y - bb.y)) / 2 / restH;
+        var tilt = ((bb.y - a.y) + (c.y - d.y)) / 2 / restW;
+        var fold = Math.min(1, Math.max(1 - w, (1 - h) * .9, 0) * 1.5 + Math.abs(tilt) * .7 + (h < 0 || w < 0 ? .5 : 0));
+        var al = (fold - .06) * .36;
+        if (al < .02) continue;
+        octx.fillStyle = 'rgba(214,226,240,' + al.toFixed(3) + ')';
+        octx.beginPath(); octx.moveTo(a.x, a.y); octx.lineTo(bb.x, bb.y); octx.lineTo(c.x, c.y); octx.lineTo(d.x, d.y); octx.closePath();
+        octx.fill();
+      }
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      ctx.clearRect(0, 0, W, H);
+      ctx.imageSmoothingEnabled = true; ctx.imageSmoothingQuality = 'high';
+      ctx.drawImage(off, 0, 0, ow * DS, oh * DS);
+      /* embroidered hem: scallops, a beaded line and drops */
+      var hb = (ROWS - 1) * COLS, ha = (ROWS - 2) * COLS;
+      ctx.strokeStyle = 'rgba(226,231,238,.78)'; ctx.lineWidth = 1.1;
+      ctx.beginPath(); ctx.moveTo(pts[hb].x, pts[hb].y);
+      for (i = 0; i < COLS - 1; i++) {
+        var P = pts[hb + i], Q = pts[hb + i + 1], mx = (P.x + Q.x) / 2, my = (P.y + Q.y) / 2;
+        var nx = (P.y - Q.y), ny = (Q.x - P.x), nl = Math.sqrt(nx * nx + ny * ny) || 1;
+        ctx.quadraticCurveTo(mx + nx / nl * 13, my + ny / nl * 13, Q.x, Q.y);
+      }
+      ctx.stroke();
+      ctx.lineWidth = .7; ctx.strokeStyle = 'rgba(226,231,238,.5)';
+      ctx.beginPath();
+      for (i = 0; i < COLS; i++) {
+        var A = pts[ha + i], B = pts[hb + i], x = A.x + (B.x - A.x) * .62, y = A.y + (B.y - A.y) * .62;
+        if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+      }
+      ctx.stroke();
+      ctx.fillStyle = 'rgba(236,240,245,.85)';
+      ctx.beginPath();
+      for (i = 0; i < COLS - 1; i++) {
+        var P2 = pts[hb + i], Q2 = pts[hb + i + 1], mx2 = (P2.x + Q2.x) / 2, my2 = (P2.y + Q2.y) / 2;
+        var nx2 = (P2.y - Q2.y), ny2 = (Q2.x - P2.x), nl2 = Math.sqrt(nx2 * nx2 + ny2 * ny2) || 1;
+        var bx = mx2 + nx2 / nl2 * 9, by = my2 + ny2 / nl2 * 9;
+        ctx.moveTo(bx + 1.7, by); ctx.arc(bx, by, 1.7, 0, 6.283);
+        var A2 = pts[ha + i], B2 = pts[hb + i], x2 = A2.x + (B2.x - A2.x) * .78, y2 = A2.y + (B2.y - A2.y) * .78;
+        ctx.moveTo(x2 + 1, y2); ctx.arc(x2, y2, 1, 0, 6.283);
+      }
+      ctx.fill();
+      /* sequins */
+      var fresh = (T - ptr.t) < 1.2;
+      for (var s = 0; s < seq.length; s++) {
+        var q = seq[s], kk = q.j * COLS + q.i, a1 = pts[kk], b1 = pts[kk + 1], c1 = pts[kk + COLS + 1], d1 = pts[kk + COLS];
+        var tx = a1.x + (b1.x - a1.x) * q.u, ty = a1.y + (b1.y - a1.y) * q.u, bx2 = d1.x + (c1.x - d1.x) * q.u, by2 = d1.y + (c1.y - d1.y) * q.u;
+        var sx = tx + (bx2 - tx) * q.v, sy = ty + (by2 - ty) * q.v;
+        var tw = Math.pow(Math.max(0, Math.sin(T * q.w * 1.6 + q.ph)), 14), pr = 0;
+        if (fresh) { var ddx = sx - ptr.x, ddy = sy - ptr.y, dd = Math.sqrt(ddx * ddx + ddy * ddy); if (dd < 150) pr = (1 - dd / 150) * .9; }
+        var al = .26 + .74 * Math.max(tw, pr);
+        ctx.fillStyle = 'rgba(238,242,247,' + al.toFixed(3) + ')';
+        ctx.beginPath(); ctx.arc(sx, sy, q.r, 0, 6.283); ctx.fill();
+        if (al > .72) {
+          var gl = q.r * 5 * al;
+          ctx.strokeStyle = 'rgba(244,247,250,' + ((al - .6) * 1.6).toFixed(3) + ')'; ctx.lineWidth = .7;
+          ctx.beginPath(); ctx.moveTo(sx - gl, sy); ctx.lineTo(sx + gl, sy); ctx.moveTo(sx, sy - gl); ctx.lineTo(sx, sy + gl); ctx.stroke();
+        }
+      }
+    }
+
+    function frame(ts) {
+      if (!running) return;
+      var dt = Math.min(.034, (ts - (last || ts)) / 1000 || .016); last = ts;
+      step(dt / 2); step(dt / 2);
+      draw();
+      raf = requestAnimationFrame(frame);
+    }
+    var rt = 0;
+    window.addEventListener('resize', function () {
+      if (lifting) return;
+      clearTimeout(rt); rt = setTimeout(function () { build(); if (!running) draw(); }, 120);
+    });
+    build();
+    return {
+      start: function () { if (running) return; running = true; last = 0; raf = requestAnimationFrame(frame); },
+      stop: function () { running = false; cancelAnimationFrame(raf); },
+      reset: function () { build(); },
+      drawOnce: function () { draw(); },
+      rustle: function (x, y, mx, my) {
+        ptr.vx = ptr.x > -1e3 ? x - ptr.x : 0; ptr.vy = ptr.y > -1e3 ? y - ptr.y : 0;
+        if (mx || my) { ptr.vx = mx; ptr.vy = my; }
+        ptr.x = x; ptr.y = y; ptr.t = T;
+      },
+      lift: function (x) {
+        lifting = true; liftT = 0;
+        var hb = (ROWS - 1) * COLS, best = 0, bd = 1e9;
+        for (var i = 0; i < COLS; i++) { var dd = Math.abs(pts[hb + i].x - x); if (dd < bd) { bd = dd; best = i; } }
+        best = Math.max(2, Math.min(COLS - 3, best));
+        gx0 = pts[hb + best].x; gy0 = pts[hb + best].y; gx1 = W / 2 + (gx0 - W / 2) * .35;
+        grab = [];
+        for (var o = -2; o <= 2; o++) {
+          var k = hb + best + o;
+          pts[k].pin = true;
+          grab.push({ k: k, ox: pts[k].x - gx0, oy: Math.abs(o) * 6 });
+        }
+      }
+    };
+  }
+
+  /* ---------------- music (music.mp3 next to the page; hidden gracefully if absent) ---------------- */
+  function makeMusic() {
+    var AC = window.AudioContext || window.webkitAudioContext;
+    if (!AC || !window.fetch) return null;
+    var ctx = null, master = null, buf = null, src = null, muted = false, want = false, loading = null, failed = false, onFail = null;
+    var VOL = .85;
+    function ensure() {
+      if (!ctx) { ctx = new AC(); master = ctx.createGain(); master.gain.value = 0; master.connect(ctx.destination); }
+      return ctx;
+    }
+    function play() {
+      if (!buf || src || !want) return;
+      src = ctx.createBufferSource(); src.buffer = buf; src.loop = true; src.connect(master);
+      var now = ctx.currentTime;
+      src.start(now + .05);
+      master.gain.cancelScheduledValues(now);
+      master.gain.setValueAtTime(0, now);
+      master.gain.linearRampToValueAtTime(muted ? 0 : VOL, now + 2.4);
+    }
+    var raw = null, rawFetch = null;
+    function fetchRaw() {
+      if (rawFetch) return rawFetch;
+      rawFetch = fetch('music.mp3').then(function (r) { if (!r.ok) throw new Error('music ' + r.status); return r.arrayBuffer(); })
+        .then(function (ab) { raw = ab; return ab; });
+      rawFetch.catch(function () { failed = true; if (onFail) onFail(); });
+      return rawFetch;
+    }
+    function load() {
+      if (loading) return loading;
+      loading = fetchRaw().then(function (ab) {
+        ensure();
+        return new Promise(function (res, rej) { var p = ctx.decodeAudioData(ab.slice(0), res, rej); if (p && p.then) p.then(res, rej); });
+      }).then(function (b) { buf = b; play(); }).catch(function () { failed = true; if (onFail) onFail(); });
+      return loading;
+    }
+    document.addEventListener('visibilitychange', function () {
+      if (!ctx) return;
+      if (document.hidden) ctx.suspend(); else if (!muted && want) ctx.resume();
+    });
+    return {
+      preload: fetchRaw,
+      failed: function () { return failed; },
+      onFail: function (fn) { onFail = fn; },
+      start: function () {
+        try { ensure(); if (ctx.state === 'suspended') ctx.resume(); want = true; if (buf) play(); else load(); return !failed; }
+        catch (e) { return false; }
+      },
+      toggle: function () {
+        if (!ctx) return muted;
+        muted = !muted;
+        var now = ctx.currentTime;
+        master.gain.cancelScheduledValues(now);
+        master.gain.setTargetAtTime(muted ? 0 : VOL, now, .25);
+        if (!muted && ctx.state === 'suspended') ctx.resume();
+        return muted;
+      }
+    };
+  }
+  var music = null, mbtn = document.getElementById('music'), snd = document.getElementById('snd');
+  try { music = makeMusic(); } catch (e) { music = null; }
+  function noMusic() { if (snd) snd.hidden = true; if (mbtn) mbtn.hidden = true; }
+  if (!music) noMusic();
+  else { music.onFail(noMusic); music.preload(); }
+  function startMusic() { if (music && mbtn && music.start() && !music.failed()) mbtn.hidden = false; }
+  if (mbtn) mbtn.addEventListener('click', function () {
+    if (!music) return;
+    var m = music.toggle();
+    mbtn.classList.toggle('muted', m);
+    mbtn.setAttribute('aria-pressed', m ? 'true' : 'false');
+    mbtn.setAttribute('aria-label', m ? 'Play music' : 'Mute music');
+  });
+
+  /* ---------------- gate ---------------- */
+  var gate = document.getElementById('gate'), canvas = document.getElementById('veil');
+  var veil = null;
+  try { veil = canvas && canvas.getContext ? makeVeil(canvas) : null; } catch (e) { veil = null; }
+  var opened = false, timers = [];
+  function finish() {
+    if (gate) gate.hidden = true;
+    de.classList.remove('gated');
+    if (veil) veil.stop();
+    reveal();
+    countdown();
+  }
+  function open(e) {
+    if (opened || !gate) return;
+    opened = true;
+    gate.classList.add('open');
+    startMusic();
+    try { if (navigator.vibrate) navigator.vibrate(12); } catch (_) {}
+    if (reduce || !veil) { gate.classList.add('instant'); timers.push(setTimeout(finish, 420)); return; }
+    var tx = e && e.clientX > 0 ? e.clientX : window.innerWidth / 2;
+    veil.lift(tx);
+    timers.push(setTimeout(reveal, 1000));
+    timers.push(setTimeout(finish, 2900));
+  }
+  function arm() { if (veil) { veil.reset(); if (reduce) veil.drawOnce(); else veil.start(); } }
+  function rewind() {
+    de.classList.add('rewinding');
+    revealed = false;
+    de.classList.remove('revealed');
+    var done = document.querySelectorAll('.reveal.in');
+    for (var i = 0; i < done.length; i++) { done[i].classList.remove('in'); if (io) io.observe(done[i]); }
+    void de.offsetWidth;
+    requestAnimationFrame(function () { requestAnimationFrame(function () { de.classList.remove('rewinding'); }); });
+  }
+  function replay() {
+    if (!gate) return;
+    timers.forEach(clearTimeout); timers = [];
+    gate.classList.add('reset');
+    gate.classList.remove('open', 'instant');
+    gate.hidden = false;
+    de.classList.add('gated');
+    window.scrollTo({ top: 0, behavior: 'instant' });
+    rewind();
+    void gate.offsetWidth;
+    arm();
+    requestAnimationFrame(function () { requestAnimationFrame(function () { gate.classList.remove('reset'); opened = false; }); });
+  }
+
+  /* ---------------- scroll reveals ---------------- */
+  var io = null, items = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    io = new IntersectionObserver(function (es) {
+      es.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, { threshold: .16, rootMargin: '0px 0px -6% 0px' });
+    items.forEach(function (el) { io.observe(el); });
+  } else {
+    items.forEach(function (el) { el.classList.add('in'); });
+  }
+
+  if (!gate || !de.classList.contains('gated')) {
+    finish();
+  } else {
+    arm();
+    gate.addEventListener('click', open);
+    gate.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
+    gate.addEventListener('pointermove', function (e) { if (veil && !opened) veil.rustle(e.clientX, e.clientY, e.movementX || 0, e.movementY || 0); });
+  }
+  var rb = document.getElementById('replay');
+  if (rb) rb.addEventListener('click', replay);
+
+  /* ---------------- contacts: numbers stored reversed, assembled here ---------------- */
+  var R = ['343488812329', '382183492329', '152889480329', '570735233329', '366080890329'];
+  var msg = encodeURIComponent("Assalam o Alaikum! I have a query about Haider & Ayesha's Walima.");
+  function fmt(d) { return '+' + d.slice(0, 2) + ' ' + d.slice(2, 5) + ' ' + d.slice(5, 8) + ' ' + d.slice(8); }
+  var cts = document.querySelectorAll('.ct');
+  for (var i = 0; i < cts.length; i++) {
+    var li = cts[i], d = R[+li.getAttribute('data-k')].split('').reverse().join(''), nm = li.querySelector('.ct-name').textContent;
+    li.querySelector('.ct-num').textContent = fmt(d);
+    var wa = li.querySelector('[data-a="wa"]'), t = li.querySelector('[data-a="tel"]');
+    wa.href = 'https://wa.me/' + d + '?text=' + msg; wa.target = '_blank'; wa.rel = 'noopener';
+    wa.setAttribute('aria-label', 'WhatsApp ' + nm);
+    t.href = 'tel:+' + d; t.setAttribute('aria-label', 'Call ' + nm);
+  }
+})();
+</script>
+</body>
+</html>
