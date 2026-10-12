@@ -102,6 +102,7 @@ html.gated, html.gated body{overflow:hidden; height:100%}
 .gate.open .hint{opacity:0}
 .gate.instant{opacity:0; transition:opacity .35s}
 .gate.reset,.gate.reset *{transition:none!important; animation:none!important}
+.rewinding *,.rewinding *::before,.rewinding *::after{transition:none!important}
 
 /* ================= HERO: the letterpress card ================= */
 .hero{position:relative; padding-block:30px 46px; overflow:hidden}
@@ -801,6 +802,16 @@ html.gated, html.gated body{overflow:hidden; height:100%}
   function arm() {
     if (curtain) { curtain.reset(); if (reduce) curtain.drawOnce(); else curtain.start(); }
   }
+  function rewind() {
+    /* snap everything back to its pre-reveal state behind the closed curtain, with transitions off */
+    de.classList.add('rewinding');
+    revealed = false;
+    de.classList.remove('revealed');
+    var done = document.querySelectorAll('.reveal.in');
+    for (var i = 0; i < done.length; i++) { done[i].classList.remove('in'); if (window.__io) window.__io.observe(done[i]); }
+    void de.offsetWidth;
+    requestAnimationFrame(function () { requestAnimationFrame(function () { de.classList.remove('rewinding'); }); });
+  }
   function replay() {
     if (!gate) return;
     timers.forEach(clearTimeout); timers = [];
@@ -809,6 +820,7 @@ html.gated, html.gated body{overflow:hidden; height:100%}
     gate.hidden = false;
     de.classList.add('gated');
     window.scrollTo({ top: 0, behavior: 'instant' });
+    rewind();
     void gate.offsetWidth;
     arm();
     try { plaque.focus({ preventScroll: true }); } catch (_) {}
@@ -831,6 +843,7 @@ html.gated, html.gated body{overflow:hidden; height:100%}
     var io = new IntersectionObserver(function (es) {
       es.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
     }, { threshold: .18, rootMargin: '0px 0px -5% 0px' });
+    window.__io = io;
     items.forEach(function (el) { io.observe(el); });
   } else {
     items.forEach(function (el) { el.classList.add('in'); });
