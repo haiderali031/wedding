@@ -110,11 +110,15 @@ main{overflow-x:clip; background:
 .photo{padding:30px 0 70px; text-align:center; position:relative}
 .photo::before{content:""; position:absolute; left:50%; top:46%; width:min(110vw,640px); height:min(80vw,460px); transform:translate(-50%,-50%) rotate(-8deg);
   background:radial-gradient(closest-side, rgba(111,165,166,.45), transparent); pointer-events:none}
-.print{position:relative; width:min(76vw,330px); margin:0 auto; padding:12px 12px 52px; background:#FFFEFB; transform:rotate(-1.6deg);
-  box-shadow:0 1px 2px rgba(29,74,82,.12), 0 24px 46px rgba(29,74,82,.18)}
-.print img{width:100%; height:auto; aspect-ratio:800/1149; object-fit:cover}
-.print figcaption{position:absolute; left:0; right:0; bottom:10px; font-family:var(--script); font-size:28px; color:var(--sea-deep)}
-.js .print.reveal img{filter:blur(8px) saturate(.2) brightness(1.25); transition:filter 2.2s ease .3s}
+.prints{position:relative; width:min(94vw,560px); aspect-ratio:100/124; margin:0 auto}
+.print{position:absolute; padding:8px 8px 26px; background:#FFFEFB; transform:rotate(var(--r,0deg));
+  box-shadow:0 1px 2px rgba(29,74,82,.14), 0 22px 40px rgba(29,74,82,.2)}
+.print img{width:100%; height:auto; display:block}
+.print.p-main{left:19%; top:17%; width:62%; padding:11px 11px 50px; z-index:2; --r:-2deg}
+.print.p-garden{left:0; top:0; width:43%; z-index:1; --r:-7deg}
+.print.p-hands{right:0; top:3%; width:37%; z-index:3; --r:7deg}
+.print figcaption{position:absolute; left:0; right:0; bottom:8px; font-family:var(--script); font-size:clamp(22px,6.4vw,30px); color:var(--sea-deep); text-align:center}
+.js .print.reveal img{filter:blur(8px) saturate(.2) brightness(1.25); transition:filter 2.2s ease calc(var(--d,0s) + .3s)}
 .js .print.reveal.in img{filter:none}
 
 /* ============ VERSE ============ */
@@ -180,8 +184,8 @@ main{overflow-x:clip; background:
 .revealed .rise{opacity:1; transform:none}
 .js .reveal{opacity:0; transform:translateY(18px); transition:opacity 1s ease var(--d,0s), transform 1.2s cubic-bezier(.2,.7,.2,1) var(--d,0s)}
 .js .reveal.in{opacity:1; transform:none}
-.js .print.reveal{transform:rotate(-1.6deg) translateY(18px)}
-.js .print.reveal.in{transform:rotate(-1.6deg)}
+.js .print.reveal{transform:rotate(var(--r,0deg)) translateY(26px)}
+.js .print.reveal.in{transform:rotate(var(--r,0deg))}
 
 /* music */
 .music{position:fixed; right:16px; bottom:16px; z-index:40; width:46px; height:46px; border-radius:50%; border:1px solid rgba(47,104,112,.35);
@@ -200,7 +204,7 @@ main{overflow-x:clip; background:
 }
 @media (prefers-reduced-motion:reduce){
   .js .rise,.js .reveal,.js .seal.reveal{opacity:1!important; transform:none!important; transition:none!important}
-  .js .print.reveal{transform:rotate(-1.6deg)!important}
+  .js .print.reveal{transform:rotate(var(--r,0deg))!important}
   .js .print.reveal img{filter:none!important}
   .js .strand .pearl,.js .strand .mono,.js .strand .gold{opacity:1!important; transform:none!important}
   .plaque .tap,.music i{animation:none!important}
@@ -242,8 +246,12 @@ main{overflow-x:clip; background:
   </section>
 
   <section class="photo" aria-label="Hasan and Munayam">
-    <figure class="print reveal"><img src="img/couple.webp" alt="Munayam laughing as Hasan shows his ring, both garlanded in flowers" width="800" height="1149" loading="lazy" decoding="async">
-      <figcaption>Hasan &amp; Munayam</figcaption></figure>
+    <div class="prints">
+      <figure class="print p-garden reveal" style="--d:.1s"><img src="img/garden.webp" alt="Munayam and Hasan laughing on a carved swing under strings of white flowers" width="900" height="1125" loading="lazy" decoding="async"></figure>
+      <figure class="print p-main reveal"><img src="img/chandelier.webp" alt="Hasan and Munayam smiling at each other beneath a glowing chandelier" width="1000" height="1250" loading="lazy" decoding="async">
+        <figcaption>Hasan &amp; Munayam</figcaption></figure>
+      <figure class="print p-hands reveal" style="--d:.25s"><img src="img/hands.webp" alt="Their hands clasped, her engagement ring catching the light" width="760" height="760" loading="lazy" decoding="async"></figure>
+    </div>
   </section>
 
   <section class="verse band" aria-label="A verse from the Quran">
