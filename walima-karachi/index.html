@@ -37,8 +37,16 @@ img{display:block; max-width:100%}
 [hidden]{display:none!important}
 .caps{font-family:var(--caps); text-transform:uppercase; letter-spacing:.3em; font-weight:400}
 main{overflow-x:clip; background:
-  radial-gradient(120% 50% at 50% 0%, rgba(169,207,203,.28), transparent 60%),
-  url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22220%22%20height%3D%22220%22%3E%3Cfilter%20id%3D%22n%22%3E%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%22.9%22%20numOctaves%3D%222%22%20seed%3D%224%22/%3E%3CfeColorMatrix%20values%3D%220%200%200%200%20.45%20%200%200%200%200%20.5%20%200%200%200%200%20.5%20%200%200%200%20.05%200%22/%3E%3C/filter%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20filter%3D%22url%28%23n%29%22/%3E%3C/svg%3E") 0 0/220px 220px, linear-gradient(180deg,var(--pearl),var(--pearl-2) 50%,var(--pearl))}
+  url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2296%22%20height%3D%2248%22%20viewBox%3D%220%200%2096%2048%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22rgb%2847%2C104%2C112%29%22%20stroke-opacity%3D%22.07%22%20stroke-width%3D%221%22%3E%3Cpath%20d%3D%22M-24%2C24%20a24%2C24%200%200%201%2048%2C0%20M-17%2C24%20a17%2C17%200%200%201%2034%2C0%20M-10%2C24%20a10%2C10%200%200%201%2020%2C0%22/%3E%3Cpath%20d%3D%22M24%2C24%20a24%2C24%200%200%201%2048%2C0%20M31%2C24%20a17%2C17%200%200%201%2034%2C0%20M38%2C24%20a10%2C10%200%200%201%2020%2C0%22/%3E%3Cpath%20d%3D%22M72%2C24%20a24%2C24%200%200%201%2048%2C0%20M79%2C24%20a17%2C17%200%200%201%2034%2C0%20M86%2C24%20a10%2C10%200%200%201%2020%2C0%22/%3E%3Cpath%20d%3D%22M0%2C48%20a24%2C24%200%200%201%2048%2C0%20M7%2C48%20a17%2C17%200%200%201%2034%2C0%20M14%2C48%20a10%2C10%200%200%201%2020%2C0%22/%3E%3Cpath%20d%3D%22M48%2C48%20a24%2C24%200%200%201%2048%2C0%20M55%2C48%20a17%2C17%200%200%201%2034%2C0%20M62%2C48%20a10%2C10%200%200%201%2020%2C0%22/%3E%3Cpath%20d%3D%22M0%2C0%20a24%2C24%200%200%201%2048%2C0%20M7%2C0%20a17%2C17%200%200%201%2034%2C0%20M14%2C0%20a10%2C10%200%200%201%2020%2C0%22/%3E%3Cpath%20d%3D%22M48%2C0%20a24%2C24%200%200%201%2048%2C0%20M55%2C0%20a17%2C17%200%200%201%2034%2C0%20M62%2C0%20a10%2C10%200%200%201%2020%2C0%22/%3E%3C/g%3E%3C/svg%3E") 0 0/96px 48px,
+  url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22220%22%20height%3D%22220%22%3E%3Cfilter%20id%3D%22n%22%3E%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%22.9%22%20numOctaves%3D%222%22%20seed%3D%224%22/%3E%3CfeColorMatrix%20values%3D%220%200%200%200%20.45%20%200%200%200%200%20.5%20%200%200%200%200%20.5%20%200%200%200%20.05%200%22/%3E%3C/filter%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20filter%3D%22url%28%23n%29%22/%3E%3C/svg%3E") 0 0/220px 220px,
+  linear-gradient(180deg,#E3EEEB 0%,#EAF2EF 30%,#E2EDEA 60%,#DCE9E6 100%)}
+/* the shoreline at the top of the page: sea, foam, wet sand */
+.invite::before{content:""; position:absolute; left:0; right:0; top:0; height:150px; z-index:0;
+  background:linear-gradient(180deg,#173C45 0%,#2F6870 38%,#6FA5A6 70%,rgba(169,207,203,0) 100%)}
+.invite .foamtop{position:absolute; left:0; top:78px; width:100%; height:44px; z-index:1}
+.invite .wrap{position:relative; z-index:2}
+.verse,.await{position:relative}
+.band{background:linear-gradient(180deg,rgba(169,207,203,0) 0,rgba(169,207,203,.55) 70px,rgba(169,207,203,.55) calc(100% - 70px),rgba(169,207,203,0) 100%)}
 
 /* ============ GATE: the moonlit sea ============ */
 .gate{position:fixed; inset:0; z-index:50; cursor:pointer; -webkit-tap-highlight-color:transparent; outline:none}
@@ -62,7 +70,7 @@ main{overflow-x:clip; background:
 
 /* ============ INVITATION ============ */
 .wrap{width:min(100% - 40px, 560px); margin-inline:auto}
-.invite{padding:64px 0 70px; text-align:center}
+.invite{position:relative; padding:150px 0 70px; text-align:center}
 .kicker{font-size:12px; letter-spacing:.5em; padding-left:.5em; color:var(--sand-text)}
 .bism{font-family:var(--arabic); font-size:24px; line-height:1.6; color:var(--sea-deep); direction:rtl; margin-top:18px}
 .strand{display:block; width:clamp(150px,44vw,190px); margin:22px auto 26px; overflow:visible}
@@ -101,7 +109,7 @@ main{overflow-x:clip; background:
 /* ============ PHOTO ============ */
 .photo{padding:30px 0 70px; text-align:center; position:relative}
 .photo::before{content:""; position:absolute; left:50%; top:46%; width:min(110vw,640px); height:min(80vw,460px); transform:translate(-50%,-50%) rotate(-8deg);
-  background:radial-gradient(closest-side, rgba(169,207,203,.45), transparent); pointer-events:none}
+  background:radial-gradient(closest-side, rgba(111,165,166,.45), transparent); pointer-events:none}
 .print{position:relative; width:min(76vw,330px); margin:0 auto; padding:12px 12px 52px; background:#FFFEFB; transform:rotate(-1.6deg);
   box-shadow:0 1px 2px rgba(29,74,82,.12), 0 24px 46px rgba(29,74,82,.18)}
 .print img{width:100%; height:auto; aspect-ratio:800/1149; object-fit:cover}
@@ -110,7 +118,7 @@ main{overflow-x:clip; background:
 .js .print.reveal.in img{filter:none}
 
 /* ============ VERSE ============ */
-.verse{padding:40px 0 76px; text-align:center}
+.verse{padding:80px 0 96px; text-align:center}
 .verse .ar{font-family:var(--arabic); font-size:clamp(24px,6.6vw,32px); line-height:1.95; color:var(--sea-deep); direction:rtl}
 .verse .tr{font-style:italic; font-size:20px; line-height:1.5; margin:20px auto 0; max-width:32ch; text-wrap:balance; color:var(--ink)}
 .verse .ref{margin-top:14px; font-size:10.5px; color:var(--sand-text)}
@@ -119,7 +127,7 @@ main{overflow-x:clip; background:
 /* ============ EVENT ============ */
 .event{padding:20px 0 70px; text-align:center}
 .eyebrow{font-size:11px; color:var(--sand-text)}
-.card{position:relative; margin:22px auto 0; max-width:500px; padding:30px 26px 30px; background:rgba(255,255,255,.72);
+.card{position:relative; margin:22px auto 0; max-width:500px; padding:30px 26px 30px; background:rgba(255,255,255,.86);
   border:1px solid rgba(169,207,203,.7); box-shadow:0 26px 50px rgba(29,74,82,.12)}
 .card::before{content:""; position:absolute; inset:6px; border:1px solid rgba(201,169,110,.45); pointer-events:none}
 .card .ev{font-family:var(--script); font-weight:400; font-size:62px; line-height:1.05; color:var(--sea-deep); margin:2px 0 14px}
@@ -139,11 +147,11 @@ main{overflow-x:clip; background:
 .tz{margin-top:18px; font-style:italic; font-size:16px; color:var(--ink-soft)}
 
 /* ============ AWAITING EYES ============ */
-.await{padding:10px 0 40px; text-align:center}
+.await{padding:60px 0 80px; text-align:center}
 .await h2{font-family:var(--script); font-weight:400; font-size:clamp(44px,12vw,58px); line-height:1.1; color:var(--sea-deep)}
 .await .sub{font-style:italic; font-size:16px; color:var(--ink-soft); margin-top:2px}
 .people{list-style:none; display:grid; gap:12px; margin:24px auto 0; max-width:460px; text-align:left}
-.pp{display:grid; grid-template-columns:1fr auto; align-items:center; gap:2px 12px; padding:13px 12px 13px 16px; background:rgba(255,255,255,.6);
+.pp{display:grid; grid-template-columns:1fr auto; align-items:center; gap:2px 12px; padding:13px 12px 13px 16px; background:rgba(255,255,255,.82);
   border:1px solid rgba(169,207,203,.7)}
 .pp-name{font-size:19px; line-height:1.25}
 .pp-num{grid-row:2; font-size:14.5px; color:var(--ink-soft); letter-spacing:.03em; font-variant-numeric:lining-nums tabular-nums}
@@ -152,16 +160,21 @@ main{overflow-x:clip; background:
 .wbtn svg{width:16px; height:16px}
 
 /* ============ CLOSING ============ */
-.closing{padding:20px 0 60px; text-align:center}
+.closing{position:relative; padding:150px 0 70px; text-align:center; color:#EEF2EE;
+  background:radial-gradient(60% 34% at 50% 52%, rgba(243,239,228,.20), transparent 70%),
+             linear-gradient(180deg, rgba(220,233,230,0) 0, #6FA5A6 70px, #2F6870 150px, #173C45 330px, #0C252E 100%)}
+.closing .foamtop{position:absolute; left:0; top:44px; width:100%; height:44px}
+.closing .swell{position:absolute; left:0; right:0; bottom:0; height:46%; pointer-events:none; opacity:.55;
+  background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22520%22%20height%3D%22300%22%20viewBox%3D%220%200%20520%20300%22%20preserveAspectRatio%3D%22none%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22rgb%28160%2C205%2C208%29%22%20stroke-width%3D%221%22%3E%3Cpath%20stroke-opacity%3D%220.05%22%20d%3D%22M0%2C40%20C65%2C30%20130%2C50%20195%2C40%20S325%2C30%20390%2C40%20S520%2C50%20520%2C40%22/%3E%3Cpath%20stroke-opacity%3D%220.07%22%20d%3D%22M0%2C74%20C65%2C64%20130%2C84%20195%2C74%20S325%2C64%20390%2C74%20S520%2C84%20520%2C74%22/%3E%3Cpath%20stroke-opacity%3D%220.09%22%20d%3D%22M0%2C108%20C65%2C98%20130%2C118%20195%2C108%20S325%2C98%20390%2C108%20S520%2C118%20520%2C108%22/%3E%3Cpath%20stroke-opacity%3D%220.11%22%20d%3D%22M0%2C142%20C65%2C132%20130%2C152%20195%2C142%20S325%2C132%20390%2C142%20S520%2C152%20520%2C142%22/%3E%3Cpath%20stroke-opacity%3D%220.13%22%20d%3D%22M0%2C176%20C65%2C166%20130%2C186%20195%2C176%20S325%2C166%20390%2C176%20S520%2C186%20520%2C176%22/%3E%3Cpath%20stroke-opacity%3D%220.15%22%20d%3D%22M0%2C210%20C65%2C200%20130%2C220%20195%2C210%20S325%2C200%20390%2C210%20S520%2C220%20520%2C210%22/%3E%3Cpath%20stroke-opacity%3D%220.17%22%20d%3D%22M0%2C244%20C65%2C234%20130%2C254%20195%2C244%20S325%2C234%20390%2C244%20S520%2C254%20520%2C244%22/%3E%3Cpath%20stroke-opacity%3D%220.19%22%20d%3D%22M0%2C278%20C65%2C268%20130%2C288%20195%2C278%20S325%2C268%20390%2C278%20S520%2C288%20520%2C278%22/%3E%3C/g%3E%3C/svg%3E") center bottom/520px 100% repeat-x}
 .seal{position:relative; width:min(66vw,260px); margin:30px auto 0}
-.seal::before{content:""; position:absolute; inset:-20%; background:radial-gradient(closest-side, rgba(169,207,203,.5), transparent); pointer-events:none}
-.seal img{position:relative; width:100%; height:auto; filter:drop-shadow(0 12px 18px rgba(20,60,66,.28))}
+.seal::before{content:""; position:absolute; inset:-28%; background:radial-gradient(closest-side, rgba(243,239,228,.42), rgba(191,224,220,.14) 55%, transparent); pointer-events:none}
+.seal img{position:relative; width:100%; height:auto; filter:drop-shadow(0 14px 24px rgba(0,0,0,.45))}
 .js .seal.reveal{opacity:0; transform:scale(1.5) rotate(-9deg)}
 .js .seal.reveal.in{opacity:1; transform:none; transition:transform .8s cubic-bezier(.3,1.5,.5,1) .2s, opacity .3s ease .2s}
-.replay{margin-top:40px; min-height:44px; padding:0 20px; background:none; border:1px solid rgba(47,104,112,.5); color:var(--sea-deep);
+.replay{position:relative; margin-top:40px; min-height:44px; padding:0 20px; background:rgba(12,37,46,.35); border:1px solid rgba(238,242,238,.55); color:#EEF2EE;
   font-family:var(--caps); font-size:11px; letter-spacing:.26em; text-transform:uppercase; cursor:pointer}
-.replay:hover{background:rgba(169,207,203,.25)}
-.foot{margin-top:34px; font-size:10.5px; color:var(--sand-text)}
+.replay:hover{background:rgba(238,242,238,.12)}
+.foot{position:relative; margin-top:34px; font-size:10.5px; color:#D9C49A}
 
 .js .rise{opacity:0; transform:translateY(16px); transition:opacity 1.1s ease var(--d,0s), transform 1.3s cubic-bezier(.2,.7,.2,1) var(--d,0s)}
 .revealed .rise{opacity:1; transform:none}
@@ -210,6 +223,7 @@ main{overflow-x:clip; background:
 
 <main>
   <section class="invite" aria-label="Invitation">
+    <svg class="foamtop" viewBox="0 0 1200 44" preserveAspectRatio="none" aria-hidden="true"><path d="M0,20 C100,6 200,32 300,18 S500,6 600,20 S800,34 900,18 S1100,6 1200,20" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".85" vector-effect="non-scaling-stroke"/><path d="M0,30 C110,18 210,40 310,28 S510,16 610,30 S810,42 910,28 S1110,16 1200,30" fill="none" stroke="#fff" stroke-width="1.6" opacity=".5" vector-effect="non-scaling-stroke"/></svg>
     <div class="wrap">
       <p class="kicker caps rise" style="--d:.1s">Walima</p>
       <p class="bism rise" style="--d:.25s" lang="ar" dir="rtl">بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
@@ -232,7 +246,7 @@ main{overflow-x:clip; background:
       <figcaption>Hasan &amp; Munayam</figcaption></figure>
   </section>
 
-  <section class="verse" aria-label="A verse from the Quran">
+  <section class="verse band" aria-label="A verse from the Quran">
     <div class="wrap">
       <div class="reveal"><svg class="shell" viewBox="0 0 40 34" aria-hidden="true"><path d="M20,32 C8,30 2,20 4,12 C7,4 14,2 20,2 C26,2 33,4 36,12 C38,20 32,30 20,32Z" fill="rgba(169,207,203,.25)" stroke="#2F6870" stroke-width=".9"/><path d="M20,32 L20,4 M20,32 L11,6 M20,32 L29,6 M20,32 L6,13 M20,32 L34,13" stroke="#2F6870" stroke-width=".7" fill="none"/><circle cx="20" cy="31" r="2.2" fill="#C9A96E"/></svg></div>
       <p class="ar reveal" lang="ar" dir="rtl">رَبَّنَا هَبْ لَنَا مِنْ أَزْوَاجِنَا وَذُرِّيَّاتِنَا قُرَّةَ أَعْيُنٍ<br>وَاجْعَلْنَا لِلْمُتَّقِينَ إِمَامًا</p>
@@ -260,7 +274,7 @@ main{overflow-x:clip; background:
     </div>
   </section>
 
-  <section class="await" aria-labelledby="await-h">
+  <section class="await band" aria-labelledby="await-h">
     <div class="wrap">
       <div class="reveal"><svg class="wave" viewBox="0 0 210 18" aria-hidden="true"><path d="M2,9 C14,1 26,1 38,9 S62,17 74,9 S98,1 110,9"/><path class="w2" d="M100,9 C112,1 124,1 136,9 S160,17 172,9 S196,1 208,9"/></svg></div>
       <h2 class="reveal" id="await-h">Awaiting Eyes</h2>
@@ -274,6 +288,8 @@ main{overflow-x:clip; background:
   </section>
 
   <section class="closing" aria-label="Closing">
+    <svg class="foamtop" viewBox="0 0 1200 44" preserveAspectRatio="none" aria-hidden="true"><path d="M0,20 C100,6 200,32 300,18 S500,6 600,20 S800,34 900,18 S1100,6 1200,20" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".85" vector-effect="non-scaling-stroke"/><path d="M0,30 C110,18 210,40 310,28 S510,16 610,30 S810,42 910,28 S1110,16 1200,30" fill="none" stroke="#fff" stroke-width="1.6" opacity=".5" vector-effect="non-scaling-stroke"/></svg>
+    <div class="swell"></div>
     <div class="wrap">
       <div class="seal reveal"><img src="img/seal.webp" alt="Sea-glass wax seal engraved with Hasan and Munayam's portrait and the initials H and M" width="760" height="742" loading="lazy" decoding="async"></div>
       <button class="replay reveal" id="replay" type="button">Return to the sea</button>
