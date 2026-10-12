@@ -238,6 +238,23 @@ html.gated, html.gated body{overflow:hidden; height:100%}
 .no-js-hide{display:none} .js .no-js-hide{display:inline-flex}
 .fine{margin-top:30px; font-size:10px; color:var(--gold-text); letter-spacing:.42em; padding-left:.42em}
 
+/* ================= CONTACT ================= */
+.contact{padding-block:18px 6px; text-align:center}
+.contact .rule{margin:0 auto 18px}
+.q-head{margin:0 0 14px; font-size:11.5px; font-weight:500; letter-spacing:.34em; padding-left:.34em; color:var(--gold-text)}
+.contacts{list-style:none; margin:0 auto; padding:0; max-width:540px; display:grid; grid-template-columns:1fr}
+.ct{display:flex; flex-direction:column; align-items:center; gap:3px; padding:16px 8px 18px; border-top:1px dotted rgba(140,111,56,.5)}
+.ct:first-child{border-top:0}
+.ct-name{font-size:20.5px; font-weight:500; color:var(--ink)}
+.ct-num{min-height:1.3em; font-size:15.5px; letter-spacing:.05em; color:var(--gold-text); font-variant-numeric:lining-nums tabular-nums}
+.ct-acts{display:flex; gap:8px; margin-top:8px}
+.cbtn{display:inline-flex; align-items:center; justify-content:center; min-height:40px; padding:0 16px; border:1px solid var(--sage-deep); border-radius:2px;
+  font-family:var(--caps); font-weight:500; font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:var(--sage-deep); text-decoration:none; transition:background-color .2s}
+.cbtn.wa{background:var(--sage-deep); color:#FBF8F1}
+.cbtn:hover{background:rgba(78,90,68,.08)} .cbtn.wa:hover{background:#5E6B53}
+.cbtn:focus-visible{outline:2px solid var(--gold); outline-offset:3px}
+@media (min-width:640px){ .contacts{grid-template-columns:1fr 1fr; column-gap:28px} .ct:nth-child(2){border-top:0} }
+
 /* ================= MUSIC BUTTON ================= */
 .music{position:fixed; z-index:150; right:calc(16px + env(safe-area-inset-right, 0px)); bottom:calc(16px + env(safe-area-inset-bottom, 0px));
   width:44px; height:44px; border-radius:50%; border:1px solid rgba(181,151,92,.85); background:rgba(252,250,245,.94); color:var(--sage-deep);
@@ -406,6 +423,37 @@ html.gated, html.gated body{overflow:hidden; height:100%}
       <p class="tz reveal">All times are Pakistan Standard Time.</p>
     </div>
   </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="contact" aria-labelledby="queries">
+    <div class="wrap">
+      <div class="reveal"><svg class="rule" viewBox="0 0 240 14" aria-hidden="true"><path d="M6,5.5 H100 M6,8.5 H100 M140,5.5 H234 M140,8.5 H234" stroke="#8E6D34" stroke-width=".8"/><path d="M108,7 L114,1 L120,7 L114,13Z M120,7 L126,1 L132,7 L126,13Z" fill="none" stroke="#8E6D34" stroke-width=".9"/><circle cx="120" cy="7" r="1.6" fill="#8E6D34"/></svg></div>
+      <h2 id="queries" class="q-head caps reveal">For any queries</h2>
+      <ul class="contacts reveal" style="--d:.1s">
+        <li class="ct" data-k="0"><span class="ct-name">Asif Mushtaq Khan</span><span class="ct-num" aria-live="polite"></span><span class="ct-acts"><a class="cbtn wa" data-a="wa">WhatsApp</a><a class="cbtn" data-a="tel">Call</a></span></li>
+        <li class="ct" data-k="1"><span class="ct-name">M. Haider Ali Khan</span><span class="ct-num" aria-live="polite"></span><span class="ct-acts"><a class="cbtn wa" data-a="wa">WhatsApp</a><a class="cbtn" data-a="tel">Call</a></span></li>
+        <li class="ct" data-k="2"><span class="ct-name">M. Hussain Asif Khan</span><span class="ct-num" aria-live="polite"></span><span class="ct-acts"><a class="cbtn wa" data-a="wa">WhatsApp</a><a class="cbtn" data-a="tel">Call</a></span></li>
+        <li class="ct" data-k="3"><span class="ct-name">M. Shahmeer Khan</span><span class="ct-num" aria-live="polite"></span><span class="ct-acts"><a class="cbtn wa" data-a="wa">WhatsApp</a><a class="cbtn" data-a="tel">Call</a></span></li>
+      </ul>
+    </div>
+  </section>
+  <script>
+  (function () {
+    /* numbers are stored reversed and only assembled here, so they are not plain text in the page source */
+    var R = ['343488812329', '77094666416', '570735233329', '366080890329'];
+    var msg = encodeURIComponent("Assalam o Alaikum! I have a query about Munayam & Hasan's wedding.");
+    function fmt(d) { return '+' + d.slice(0, 2) + ' ' + d.slice(2, 5) + ' ' + d.slice(5, 8) + ' ' + d.slice(8); }
+    var items = document.querySelectorAll('.ct');
+    for (var i = 0; i < items.length; i++) {
+      var li = items[i], d = R[+li.getAttribute('data-k')].split('').reverse().join('');
+      li.querySelector('.ct-num').textContent = fmt(d);
+      var wa = li.querySelector('[data-a="wa"]'), t = li.querySelector('[data-a="tel"]');
+      wa.href = 'https://wa.me/' + d + '?text=' + msg; wa.target = '_blank'; wa.rel = 'noopener';
+      wa.setAttribute('aria-label', 'WhatsApp ' + li.querySelector('.ct-name').textContent);
+      t.href = 'tel:+' + d; t.setAttribute('aria-label', 'Call ' + li.querySelector('.ct-name').textContent);
+    }
+  })();
+  </script>
 
   <!-- ============ CLOSING ============ -->
   <section class="closing" aria-label="With love">
