@@ -197,7 +197,12 @@ html.gated, html.gated body{overflow:hidden; height:100%}
 .events{padding-block:64px 30px; text-align:center}
 .eyebrow{font-size:11px; color:var(--gold-text); padding-left:.3em}
 .events h2{font-family:var(--script); font-weight:400; font-size:clamp(46px,13vw,64px); line-height:1.1; color:var(--ink); margin:6px 0 0}
-.events .rule{margin:12px auto 38px}
+.events .rule{margin:12px auto 22px}
+.insha{display:flex; flex-direction:column; align-items:center; margin:0 auto 34px}
+.insha-ar{font-family:var(--arabic); font-size:clamp(30px,8.4vw,38px); line-height:1.55; direction:rtl; color:var(--gold-text);
+  display:flex; align-items:center; gap:16px}
+.insha-ar::before,.insha-ar::after{content:""; width:7px; height:7px; transform:rotate(45deg); border:1px solid var(--gold); opacity:.8; flex:none}
+.insha-tr{font-style:italic; font-size:15px; letter-spacing:.06em; color:var(--sage-deep); margin-top:-2px}
 .cards{display:grid; grid-template-columns:1fr; gap:34px}
 .event{padding:30px 26px 34px; text-align:center}
 .band{width:100%; height:auto; overflow:visible}
@@ -228,6 +233,7 @@ html.gated, html.gated body{overflow:hidden; height:100%}
 .parents{margin-top:14px; color:var(--ink); font-size:clamp(15px,4.4vw,19px); letter-spacing:.22em; line-height:1.6; padding-left:.22em}
 .parents span{display:block}
 .family{font-style:italic; font-size:22px; margin-top:2px; color:var(--ink)}
+.closing{overflow-x:clip}
 .wax{width:min(64vw,250px); margin:40px auto 0; filter:drop-shadow(0 10px 14px rgba(74,40,30,.26))}
 .wax img{display:block; width:100%; height:auto}
 .wax-mono text{font-family:var(--caps); font-weight:600; font-size:19px}
@@ -355,7 +361,7 @@ html.gated, html.gated body{overflow:hidden; height:100%}
         </div>
         <p class="rise" style="--d:1.75s"><span class="dmonth caps press">January &middot; 2027</span></p>
         <p class="dcity caps press rise" style="--d:1.8s">Lahore</p>
-        <p class="count rise" id="count" style="--d:1.9s"><span class="num" id="days">89</span> <span id="days-label">days until the Nikkah</span></p>
+        <p class="count rise" id="count" style="--d:1.9s"><span class="num" id="days">88</span> <span id="days-label">days until the Nikkah</span></p>
         <a class="cue rise" style="--d:2.1s" href="#portrait" aria-label="Scroll down"><span></span></a>
       </article>
     </div>
@@ -391,6 +397,10 @@ html.gated, html.gated body{overflow:hidden; height:100%}
       <p class="eyebrow caps reveal">The Celebrations</p>
       <h2 id="join" class="reveal" style="--d:.1s">Join us in Lahore</h2>
       <div class="reveal" style="--d:.2s"><svg class="rule" viewBox="0 0 240 14" aria-hidden="true"><path d="M6,5.5 H100 M6,8.5 H100 M140,5.5 H234 M140,8.5 H234" stroke="#BC9A5C" stroke-width=".8"/><path d="M108,7 L114,1 L120,7 L114,13Z M120,7 L126,1 L132,7 L126,13Z" fill="none" stroke="#BC9A5C" stroke-width=".9"/><circle cx="120" cy="7" r="1.6" fill="#BC9A5C"/></svg></div>
+      <div class="insha reveal" style="--d:.3s">
+        <p class="insha-ar" lang="ar" dir="rtl">إِنْ شَاءَ ٱللَّٰهُ</p>
+        <p class="insha-tr">In sh&#257;&rsquo; All&#257;h</p>
+      </div>
       <div class="cards">
         <article class="event paper reveal" aria-label="Nikkah">
           <svg class="band" viewBox="0 0 300 22" aria-hidden="true"><use href="#gBand"/></svg>
